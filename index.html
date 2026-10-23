@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#f4eadf">
+  <meta name="description"
+    content="Шугаринг у мастера Ольги в Ижевске. Услуги, цены и контакты для записи.">
+
+  <title>Ольга — мастер шугаринга</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#home">ОЛЬГА</a>
+    <nav>
+      <a href="#services">Услуги</a>
+      <a href="#about">О мастере</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="button button-small header-booking" href="#services" id="header-booking">
+      Записаться <span class="header-selection" id="header-selection"></span>
+    </a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow">ШУГАРИНГ · БЕРЕЖНЫЙ УХОД</p>
+        <h1>Гладкая кожа начинается с заботы о себе</h1>
+        <p>
+          Уютный кабинет, внимательный подход
+          и время для себя.
+        </p>
+        <a class="button" href="#services" data-go-services>
+          Выбрать процедуры
+        </a>
+      </div>
+
+      <div class="hero-image">
+        <img
+          src="assets/images/cabinet.png"
+          alt="Кабинет мастера шугаринга Ольги"
+        >
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <p class="eyebrow">ПРАЙС</p>
+      <h2>Услуги и цены</h2>
+      <p class="section-intro">
+        Отметь одну или несколько процедур, а затем свяжись с Ольгой.
+      </p>
+
+      <div class="service-list" id="service-list"></div>
+    </section>
+
+    <section class="section about" id="about">
+      <div>
+        <p class="eyebrow">ЗНАКОМСТВО</p>
+        <h2>Давай знакомиться</h2>
+        <p>
+          Меня зовут Ольга. Для меня важно,
+          чтобы каждая клиентка чувствовала
+          себя спокойно и комфортно.
+        </p>
+      </div>
+    </section>
+
+    <section class="section booking" id="booking">
+      <p class="eyebrow">ТВОЁ ВРЕМЯ ДЛЯ СЕБЯ</p>
+      <h2>Запишись на процедуру</h2>
+      <p>
+        Выбери услуги и согласуй время визита по телефону или в MAX.
+      </p>
+      <a class="button" id="booking-link" href="#services" data-go-services>
+        Перейти к выбору услуг
+      </a>
+    </section>
+
+    <section class="section contacts" id="contacts">
+      <p class="eyebrow">МЫ ЖДЁМ ТЕБЯ</p>
+      <h2>Как нас найти</h2>
+      <p id="address">Адрес кабинета будет добавлен</p>
+      <p id="working-hours">График работы будет добавлен</p>
+      <a id="map-link" href="#" target="_blank"
+         rel="noopener noreferrer">
+        Построить маршрут
+      </a>
+    </section>
+  </main>
+
+  
+<footer class="footer">
+  <div class="footer-main">
+    <div class="footer-brand">
+      <a href="#home" class="footer-logo">Ольга<span>.</span></a>
+      <p class="footer-subtitle">МАСТЕР ШУГАРИНГА</p>
+      <p class="footer-description">
+        Время для себя. Забота о коже.
+        Комфорт в каждой детали.
+      </p>
+    </div>
+
+    <div class="footer-navigation">
+      <p class="footer-heading">НАВИГАЦИЯ</p>
+      <a href="#home">Главная</a>
+      <a href="#services">Услуги и цены</a>
+      <a href="#about">О мастере</a>
+      <a href="#contacts">Контакты</a>
+    </div>
+
+    <div class="footer-appointment">
+      <p class="footer-heading">ТВОЁ ВРЕМЯ ДЛЯ СЕБЯ</p>
+      <p>Выбери процедуру и найди удобное время для визита.</p>
+      <a class="footer-button" href="#services" data-go-services>
+        Выбрать процедуры <span>↗</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>ОЛЬГА · ШУГАРИНГ</span>
+    <a href="#home">Вернуться наверх ↑</a>
+  </div>
+</footer>
+
+
+  <aside class="selection-bar" id="selection-bar" hidden aria-live="polite">
+    <div class="selection-bar-summary">
+      <strong id="selection-bar-count">Услуги не выбраны</strong>
+      <span id="selection-bar-total">Выбери процедуры из прайса</span>
+    </div>
+    <button class="button" id="selection-bar-book" type="button">Перейти к записи <span aria-hidden="true">↗</span></button>
+  </aside>
+
+  <dialog class="booking-modal" id="booking-modal" aria-labelledby="booking-title">
+    <button class="modal-close" id="modal-close" type="button" aria-label="Закрыть окно">×</button>
+    <p class="eyebrow">ЗАПИСЬ</p>
+    <h2 id="booking-title">Связаться с Ольгой</h2>
+    <p class="modal-intro">Выбранные процедуры и их стоимость:</p>
+    <div id="modal-services" class="modal-services"></div>
+    <div class="modal-total"><span>Итого по прайсу</span><strong id="modal-total">0 ₽</strong></div>
+    <p class="modal-hint">Время визита согласовывается лично. Выбор услуг не подтверждает запись.</p>
+    <a class="button modal-contact" id="modal-phone" href="#">Позвонить Ольге</a>
+    <a class="button modal-contact modal-max" id="modal-max" href="#" target="_blank" rel="noopener noreferrer">Написать в MAX</a>
+    <button class="modal-copy" id="modal-copy" type="button">Скопировать список услуг</button>
+    <p class="modal-status" id="modal-status" aria-live="polite"></p>
+  </dialog>
+
+</body>
+</html>
